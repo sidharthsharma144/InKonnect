@@ -55,7 +55,7 @@ const Login = () => {
           :
           <p className="login-toggle">
             Create an account
-            <span onClick={()=>setCurrState("Sign up")}>Click here</span>
+            <span onClick={()=>setCurrState("Sign up")}>Click here</span>;;;;;;
           </p>
           }
         </div>
