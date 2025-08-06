@@ -1,0 +1,64 @@
+.login {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden; /* prevent scrollbars from pseudo-element */
+}
+
+/* background image and grey filter applied only here */
+.login::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url(https://plus.unsplash.com/premium_photo-1661299252549-60847804b646?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bWVldGluZyUyMHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D) no-repeat center center;
+  background-size: cover;
+  filter: grayscale(0%) brightness(80%);
+  z-index: 0;
+}
+
+/* keep all content above the background */
+.login > * {
+  position: relative;
+  z-index: 1;
+}
+
+.login .logo {
+  width: max(20vw, 200px);
+}
+
+.login-form {
+  background: white;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 3px;
+}
+
+.login-form button {
+  padding: 3px;
+  background-color: white;
+  border: 1px solid black; /* 👈 black border */
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #f3f0f0; /* subtle hover effect */
+}
+
+.login-form h2{
+    font-weight:500;
+}
+.form-input{
+    padding: 8px 10px;
+    border: 1px solid #c9c9c9;
+    border-radius: 4px;
+    outline-color: #077EFF;
+}
