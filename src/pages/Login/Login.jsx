@@ -36,7 +36,7 @@ const Login = () => {
           required
         />
 
-        <button type="submit">{currState === "Sign up"?"Create account":"Login now"}</button>
+        <button type="submit">{currState === "Sign up"?"Create account":"Login Now"}</button>
 
         {currState === "Sign Up" && (
           <div className="login-term">
@@ -46,12 +46,18 @@ const Login = () => {
         )}
 
         <div className="login-forgot">
-          <p className="login-toggle">
-            {currState === "Sign Up"
-              ? "Already have an account"
-              : "Don't have an account?"}{" "}
-            <span onClick={toggleState}>Click here</span>
+          {
+            currState === "Sign up"
+            ? <p className="login-toggle">
+            Already have an account
+            <span onClick={()=>setCurrState("Login")}>Login here</span>
           </p>
+          :
+          <p className="login-toggle">
+            Create an account
+            <span onClick={()=>setCurrState("Sign up")}>Click here</span>
+          </p>
+          }
         </div>
       </form>
     </div>
